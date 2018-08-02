@@ -50,9 +50,9 @@ class BestSkill(MycroftSkill):
             self.count -= 1
         self.speak_dialog("count.is.now", data={"count": self.count})
 
-    @intent_handler(IntentBuilder("").require("Best"))
+    @intent_handler(IntentBuilder("").require("Beast"))
     def handle_best_intent(self, message):
-        self.speak_dialog("best")
+        self.speak_dialog("da.best")
 
     # The "stop" method defines what Mycroft does when told to stop during
     # the skill's execution. In this case, since the skill's functionality

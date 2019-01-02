@@ -56,7 +56,7 @@ class BestSkill(MycroftSkill):
 
     @intent_handler(IntentBuilder("").require("Origami"))
     def handle_ORII_intent(self,message):
-	self.speak_dialog("origami")
+        self.speak_dialog("origami")
     # The "stop" method defines what Mycroft does when told to stop during
     # the skill's execution. In this case, since the skill's functionality
     # is extremely simple, there is no need to override it.  If you DO

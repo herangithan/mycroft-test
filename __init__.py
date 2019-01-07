@@ -71,7 +71,7 @@ class BestSkill(MycroftSkill):
         pro = subprocess.Popen(["/home/herangithan/env/bin/python3",path,p1,p2,p3,p4],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
         #comm = str(input("Whats the command input"))
         while(True):
-           output, err = pro.communicate(comm)
+           output, err = pro.communicate("testing")
            rc = pro.returncode
           # comm = str(input("Whats the command: "))
         self.speak_dialog("Google Assistant has Exited")

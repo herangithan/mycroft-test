@@ -62,8 +62,12 @@ class BestSkill(MycroftSkill):
         self.speak_dialog("origami")
     @intent_handler(IntentBuilder("").require("Google"))
     def handle_Google_intent(self,message):
-        path = ("/home/herangithan/assistant-sdk-python/google-assistant-sdk/googlesamples/assistant/grpc/textinput.py --device-id 158195662888-u49u2d7mpdilq3sjq4h0dq0dto7j8uaf.apps.googleusercontent.com  --device-model-id razer-project-razer_assistant_hub-wigbnw")
-        subprocess.Popen(["/home/herangithan/env/bin/python3",path])
+        path = "/home/herangithan/assistant-sdk-python/google-assistant-sdk/googlesamples/assistant/grpc/textinput.py")
+        p1 = "--device-id"
+        p2 = "158195662888-u49u2d7mpdilq3sjq4h0dq0dto7j8uaf.apps.googleusercontent.com"
+        p3 = "--device-model-id"
+        p4 = "razer-project-razer_assistant_hub-wigbnw"
+        subprocess.Popen(["/home/herangithan/env/bin/python3",path,p1,p2,p3,p4])
         self.speak_dialog("Google Assistant has Exited")
 
     # The "stop" method defines what Mycroft does when told to stop during

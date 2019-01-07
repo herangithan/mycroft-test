@@ -70,7 +70,7 @@ class BestSkill(MycroftSkill):
         p4 = "razer-project-razer_assistant_hub-wigbnw"
         pro = subprocess.Popen(["/home/herangithan/env/bin/python3",path,p1,p2,p3,p4],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
         #comm = str(input("Whats the command input"))
-        while(comm!="x"):
+        while(true):
            output, err = pro.communicate(comm)
            rc = pro.returncode
           # comm = str(input("Whats the command: "))

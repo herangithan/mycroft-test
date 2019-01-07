@@ -62,7 +62,7 @@ class BestSkill(MycroftSkill):
         self.speak_dialog("origami")
     @intent_handler(IntentBuilder("").require("Google"))
     def handle_Google_intent(self,message):
-        path = "/home/herangithan/assistant-sdk-python/google-assistant-sdk/googlesamples/assistant/grpc/textinput.py")
+        path = "/home/herangithan/assistant-sdk-python/google-assistant-sdk/googlesamples/assistant/grpc/textinput.py"
         p1 = "--device-id"
         p2 = "158195662888-u49u2d7mpdilq3sjq4h0dq0dto7j8uaf.apps.googleusercontent.com"
         p3 = "--device-model-id"

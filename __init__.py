@@ -13,6 +13,7 @@ from mycroft.skills.core import MycroftSkill, intent_handler
 from mycroft.util.log import LOG
 import os
 import subprocess
+import time
 
 # Each skill is contained within its own class, which inherits base methods
 # from the MycroftSkill class.  You extend this class as shown below.
@@ -67,9 +68,9 @@ class BestSkill(MycroftSkill):
         p2 = "158195662888-u49u2d7mpdilq3sjq4h0dq0dto7j8uaf.apps.googleusercontent.com"
         p3 = "--device-model-id"
         p4 = "razer-project-razer_assistant_hub-wigbnw"
-        pro = subprocess.Popen(["/home/herangithan/env/bin/python3",path,p1,p2,p3,p4,stdin=PIPE,stdout=PIPE,stderr=PIPE])
-        (stdout, stderr) = p.communicate()
+        pro = subprocess.Popen(["/home/herangithan/env/bin/python3",path,p1,p2,p3,p4])
         pro.wait()
+        time.sleep(10)
         self.speak_dialog("Google Assistant has Exited")
 
     # The "stop" method defines what Mycroft does when told to stop during

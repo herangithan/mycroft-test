@@ -69,7 +69,7 @@ class BestSkill(MycroftSkill):
         p3 = "--device-model-id"
         p4 = "razer-project-razer_assistant_hub-wigbnw"
         #pro = subprocess.Popen(["/home/herangithan/env/bin/python3",path,p1,p2,p3,p4],stdout=subprocess.PIPE)
-        pro = subprocess.Popen("/home/herangithan/env/bin/python3 " +path + " " + p1 + " " + p2 + " " + p3+  " " + p4, shell=True, stderror=subprocess.PIPE)
+        pro = subprocess.Popen("/home/herangithan/env/bin/python3 " +path + " " + p1 + " " + p2 + " " + p3+  " " + p4, shell=True, stderr=subprocess.PIPE)
         while(True):
            out = pro.stderr.read(1)
            if out == '' and pro.poll() != None:

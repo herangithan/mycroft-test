@@ -14,6 +14,7 @@ from mycroft.util.log import LOG
 import os
 import subprocess
 import time
+import sys
 
 # Each skill is contained within its own class, which inherits base methods
 # from the MycroftSkill class.  You extend this class as shown below.

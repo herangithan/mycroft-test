@@ -11,6 +11,7 @@ from adapt.intent import IntentBuilder
 from mycroft.skills.core import MycroftSkill, intent_handler
 from mycroft.util.log import LOG
 import os
+import subprocess
 
 # Each skill is contained within its own class, which inherits base methods
 # from the MycroftSkill class.  You extend this class as shown below.
@@ -60,7 +61,8 @@ class BestSkill(MycroftSkill):
         self.speak_dialog("origami")
     @intent_handler(IntentBuilder("").require("Google"))
     def handle_Google_intent(self,message):
-        os.system("~/assistant-sdk-python/google-assistant-sdk/googlesamples/assistant/grpc/textinput.py --device-id 158195662888-u49u2d7mpdilq3sjq4h0dq0dto7j8uaf.apps.googleusercontent.com  --device-model-id razer-project-razer_assistant_hub-wigbnw")
+        path = ("~/assistant-sdk-python/google-assistant-sdk/googlesamples/assistant/grpc/textinput.py --device-id 158195662888-u49u2d7mpdilq3sjq4h0dq0dto7j8uaf.apps.googleusercontent.com  --device-model-id razer-project-razer_assistant_hub-wigbnw")
+        subprocess.Popen(["~/env/bin/python",path])
         self.speak_dialog("Google Assistant has Exited")
 
     # The "stop" method defines what Mycroft does when told to stop during

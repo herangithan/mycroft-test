@@ -57,6 +57,11 @@ class BestSkill(MycroftSkill):
     @intent_handler(IntentBuilder("").require("Origami"))
     def handle_ORII_intent(self,message):
         self.speak_dialog("origami")
+    @intent_handler(IntentBuilder("").require("Google"))
+    def handle_Google_intent(self,message):
+        os.system("~/assistant-sdk-python/google-assistant-sdk/googlesamples/assistant/grpc/textinput.py --device-id 158195662888-u49u2d7mpdilq3sjq4h0dq0dto7j8uaf.apps.googleusercontent.com  --device-model-id razer-project-razer_assistant_hub-wigbnw")
+        self.speak_dialog("Google Assistant has Exited")
+
     # The "stop" method defines what Mycroft does when told to stop during
     # the skill's execution. In this case, since the skill's functionality
     # is extremely simple, there is no need to override it.  If you DO

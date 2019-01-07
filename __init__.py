@@ -67,7 +67,8 @@ class BestSkill(MycroftSkill):
         p2 = "158195662888-u49u2d7mpdilq3sjq4h0dq0dto7j8uaf.apps.googleusercontent.com"
         p3 = "--device-model-id"
         p4 = "razer-project-razer_assistant_hub-wigbnw"
-        pro = subprocess.Popen(["/home/herangithan/env/bin/python3",path,p1,p2,p3,p4])
+        pro = subprocess.Popen(["/home/herangithan/env/bin/python3",path,p1,p2,p3,p4,stdin=PIPE,stdout=PIPE,stderr=PIPE])
+        (stdout, stderr) = p.communicate()
         pro.wait()
         self.speak_dialog("Google Assistant has Exited")
 

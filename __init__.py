@@ -71,13 +71,8 @@ class BestSkill(MycroftSkill):
         p4 = "razer-project-razer_assistant_hub-wigbnw"
         #pro = subprocess.Popen(["/home/herangithan/env/bin/python3",path,p1,p2,p3,p4],stdout=subprocess.PIPE)
         pro = subprocess.Popen("/home/herangithan/env/bin/python3 " +path + " " + p1 + " " + p2 + " " + p3+  " " + p4, shell=True, stdout = subprocess.PIPE,stdin = subprocess.PIPE, stderr=subprocess.PIPE)
-        while(True):
-           out = pro.stderr.read(1)
-           if out == '' and pro.poll() != None:
-               break
-           if out != '':
-               sys.stdout.write(out.decode('utf-8')
-               sys.stdout.flush()
+        out = pro.communicate()[0]
+	print(out)
         self.speak_dialog("Google Assistant has Exited")
 
     # The "stop" method defines what Mycroft does when told to stop during

@@ -69,7 +69,7 @@ class BestSkill(MycroftSkill):
         p2 = "158195662888-u49u2d7mpdilq3sjq4h0dq0dto7j8uaf.apps.googleusercontent.com"
         p3 = "--device-model-id"
         p4 = "razer-project-razer_assistant_hub-wigbnw"
-        pro = subprocess.call(["/home/herangithan/env/bin/python3",path,p1,p2,p3,p4],stdout=subprocess.PIPE)
+        pro = subprocess.call(["/home/herangithan/env/bin/python3",path,p1,p2,p3,p4],stdout=self.speak_dialog(),stdin=subprocess.PIPE)
         #pro = subprocess.Popen("/home/herangithan/env/bin/python3 " +path + " " + p1 + " " + p2 + " " + p3+  " " + p4, shell=True, stdout = subprocess.PIPE,stdin = subprocess.PIPE, stderr=subprocess.PIPE)
         #out = pro.communicate()[0]
         #print(out)

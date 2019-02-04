@@ -80,7 +80,7 @@ class BestSkill(MycroftSkill):
         result = re.search('t>(.*)\n',data)
         output = result.group(1).replace(" ",".")
         query = message.data
-        LOG(query)
+        LOG.INFO(query)
         self.speak_dialog(output)
 
     # The "stop" method defines what Mycroft does when told to stop during

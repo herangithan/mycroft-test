@@ -74,7 +74,7 @@ class BestSkill(MycroftSkill):
         #pro = subprocess.Popen("/home/herangithan/env/bin/python3 " +path + " " + p1 + " " + p2 + " " + p3+  " " + p4, shell=True, stdout = subprocess.PIPE,stdin = subprocess.PIPE, stderr=subprocess.PIPE)
         #out = pro.communicate()[0]
         #print(out)
-        self.speak_dialog(p.communicate("whats the time".encode)[0].rstrip())
+        self.speak_dialog(p.communicate("whats the time".encode())[0].rstrip())
 
     # The "stop" method defines what Mycroft does when told to stop during
     # the skill's execution. In this case, since the skill's functionality

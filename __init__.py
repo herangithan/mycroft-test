@@ -79,7 +79,7 @@ class BestSkill(MycroftSkill):
         data = test.decode()
         result = re.search('t>(.*)\n',data)
         output = result.group(1).replace(" ",".")
-        self.speak_dialog(data={"output":output})
+        self.speak_dialog(output)
 
     # The "stop" method defines what Mycroft does when told to stop during
     # the skill's execution. In this case, since the skill's functionality

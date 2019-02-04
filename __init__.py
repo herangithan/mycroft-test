@@ -76,7 +76,7 @@ class BestSkill(MycroftSkill):
         #out = pro.communicate()[0]
         #print(out)
         test = p.communicate("whats the time".encode())[0].rstrip()
-        data = data.decode()
+        data = test.decode()
         result = re.search('t>(.*)\n',data)
         output = result.group(1).replace(" ",".")
         self.speak_dialog(data={"output":output})

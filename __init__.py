@@ -15,6 +15,7 @@ import os
 from subprocess import Popen, PIPE, STDOUT
 import time
 import sys
+import re
 
 # Each skill is contained within its own class, which inherits base methods
 # from the MycroftSkill class.  You extend this class as shown below.
@@ -75,9 +76,10 @@ class BestSkill(MycroftSkill):
         #out = pro.communicate()[0]
         #print(out)
         test = p.communicate("whats the time".encode())[0].rstrip()
-        test = test.replace(" ",".")
-        print(test)
-        self.speak_dialog(test)
+        data = data.decode()
+        result = re.search('t>(.*)\n',data)
+        output = result.group(1).replace(" ",".")
+        self.speak_dialog(data={"output":output})
 
     # The "stop" method defines what Mycroft does when told to stop during
     # the skill's execution. In this case, since the skill's functionality
